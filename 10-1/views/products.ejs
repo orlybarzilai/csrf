@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/myStyle.css">
+        <script>function details(code){
+            let p="/product-details/" + code;
+            window.location=p;
+            }
+            </script>
+    </head>
+    <body>
+        <%- include('includes/menu.ejs') %>
+        <h1>Product List</h1>
+        <p><% if (products.length>0){ 
+            for (let x in products){ %>
+                <h2><%=products[x].name%><button value=<%=products[x].code%> onclick=details(value)>Click</button></h2>
+
+           <% }
+           }%>
+        </p>
+    </body>
+</html>

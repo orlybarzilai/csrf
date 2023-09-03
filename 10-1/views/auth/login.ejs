@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <%- include('../includes/menu.ejs') %>
+        <form method ="post" action="/login">
+            <p>Enter User Details:</p>
+            <p><label>Email: </label></label><input type="email" name="email"></p>
+            <p><label>Password: </label><input type="password" name="password"></p>
+            <input type="hidden" name="_csrf" value="<%=csrfToken %>">
+            <p><input type="submit" value="Add"></p>
+         </form>
+         
+    </body>
+</html>

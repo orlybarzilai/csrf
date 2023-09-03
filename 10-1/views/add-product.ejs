@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <%- include('includes/menu.ejs') %>
+        <form method ="post" action="/product">
+            <p>Enter product name:</p>
+            <p><input type="text" name="name"></p>
+            <input type="hidden" name="_csrf" value="<%=csrfToken %>">
+            <p><input type="submit" value="Add"></p>
+         </form>
+         
+    </body>
+</html>
